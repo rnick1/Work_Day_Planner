@@ -1,6 +1,14 @@
-var currentDay = document.getElementById("currentDay");
-currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
+// $(document).ready(function() {
 
+    var currentDay = document.getElementById("currentDay");
+    var table = document.getElementById("table");
+    var time = document.getElementsByClassName("time-slot");
+    var calendarItem = document.getElementsByClassName("form-control");
+    var addItem = document.getElementsByClassName("add-item-button");
+
+    currentDay = date();
+
+// });
 // To do:
 
 // Add date/time to currentDay id
