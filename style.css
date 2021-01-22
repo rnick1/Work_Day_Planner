@@ -5,11 +5,13 @@ body {
     line-height: 1;
   }
 
-    /* This is the large banner at the top of the page */
-    .jumbotron {
-        text-align: center;
-        background-color: transparent;
-        color: black;
-        border-radius: 0;
-        border-bottom: 10px solid black;
-      }
+/* This is the large banner at the top of the page */
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+ }
+
+ 
