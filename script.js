@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
+    // Date and time that updates thanks to moment.js:
     $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm a'));
 
-    var textArea = document.querySelector("#textarea");
+    // Below is supposed to take what the user puts into the textarea and put it into local storage. After it is in local storage, 
+    // it is supposed to replace the text area with a para tag with the content in it.
+    var textArea = document.querySelector(".textarea");
     var savedText = [];
     var localStorageContent = localStorage.getItem("savedText");
 
@@ -10,9 +13,11 @@ $(document).ready(function() {
         savedText = JSON.parse(localStorageContent); 
     }
 
-    $("#saveBtn").on('click', function(event) {
+    $(".saveBtn").on('click', function(event) {
+        var text = $(this).parent().siblings('td').children('textarea').val();
+        console.log(text);
         var userInput = {
-            Text: textArea.value,
+            Text: text,
         };
         savedText.push(userInput);
         event.preventDefault();
