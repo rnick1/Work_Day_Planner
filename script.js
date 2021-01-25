@@ -17,7 +17,7 @@ $(document).ready(function() {
         var text = $(this).parent().siblings('td').children('textarea').val();
         console.log(text);
         
-        var timeSlot = $(this).parent().siblings('th').children('hour').val();
+        var timeSlot = $(this).parent().siblings('th').val();
         console.log(timeSlot);
         
         var userInput = {
