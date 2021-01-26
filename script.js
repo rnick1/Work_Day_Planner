@@ -1,41 +1,32 @@
 $(document).ready(function() {
 
-    // Date and time that updates thanks to moment.js:
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
 
-    // Everything below this is supposed to take what the user puts into the textarea and put it into local storage. 
-    var textArea = document.querySelector('.textarea');
-    var savedText = [];
-    var localStorageContent = localStorage.getItem('savedText');
+    
+    
+    var textArea9 = document.querySelector('#9text');
+    var savedText9 = [];
+    var localStorageContent = localStorage.getItem('savedText9');
+    textArea9.textContent = JSON.parse(localStorageContent);
 
-    textArea.textContent = JSON.parse(localStorageContent);
-
-    // if (localStorageContent !== null) {
-    //     savedText = JSON.parse(localStorageContent); 
-    // };
-    // console.log(localStorageContent);
-
-    $('.saveBtn').on('click', function(event) {
-        var text = $(this).parent().siblings('td').children('textarea').val();
-        // console.log(text);
-        // var timeSlot = $(this).parent().siblings('th').text();
-        // console.log(timeSlot);
+    $('#save9').on('click', function(event) {
+        var text = $(this).parent().siblings('td').children('9text').val();
         var userInput = text;
-            // Time: timeSlot, 
-
-        // console.log(userInput);
-        savedText.push(userInput);
+        savedText9.push(userInput);
         event.preventDefault();
-        localStorage.setItem('savedText', JSON.stringify(savedText));
+        localStorage.setItem('savedText9', JSON.stringify(savedText9));
     });
 
-// Everything below this is supposed to take it out of local storage and display it in the text areas.
-//     function displayText() {
-//         for (var i = 0; i < savedText.length; i++) {
-//             var textArea = savedText[i].Text;
-//         };
-//     }
+// 1. Make it so event handlers are grabbing the save button id's instead of class.
+// 2. Change textArea var to id's.
+// 3. Make savedText array unique for each button.
+// 4. Make sure that the localStorageContent var is grabbing from the updated savedText.
+// 5. Update textArea.textContent to whatever textArea is being used.
+// 6. Update savedText.
+// 7. Update savedText in the localStorage.setItem line.
+// 8. Test.
 
-// displayText();
+
 
 });
+
