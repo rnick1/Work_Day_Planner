@@ -39,3 +39,22 @@ $(document).ready(function() {
 // displayText();
 
 });
+
+$(document).ready(function() {
+
+    $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
+
+    var textArea = document.querySelector('.textarea');
+    var savedText = [];
+    var localStorageContent = localStorage.getItem('savedText');
+    textArea.textContent = JSON.parse(localStorageContent);
+
+    $('.saveBtn').on('click', function(event) {
+        var text = $(this).parent().siblings('td').children('textarea').val();
+        var userInput = text;
+        savedText.push(userInput);
+        event.preventDefault();
+        localStorage.setItem('savedText', JSON.stringify(savedText));
+    });
+
+});
