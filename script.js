@@ -6,12 +6,12 @@ $(document).ready(function() {
     // Everything below this is supposed to take what the user puts into the textarea and put it into local storage. 
     var textArea = document.querySelector('.textarea');
     var savedText = [];
-    console.log(savedText);
     var localStorageContent = localStorage.getItem('savedText');
 
     if (localStorageContent !== null) {
         savedText = JSON.parse(localStorageContent); 
     };
+    console.log(localStorageContent);
 
     $('.saveBtn').on('click', function(event) {
         var text = $(this).parent().siblings('td').children('textarea').val();
@@ -26,15 +26,20 @@ $(document).ready(function() {
         savedText.push(userInput);
         event.preventDefault();
         localStorage.setItem('savedText', JSON.stringify(savedText));
-        displayText();
     });
+
 // Everything below this is supposed to take it out of local storage and display it in the text areas.
     function displayText() {
         for (var i = 0; i < savedText.length; i++) {
             var textItem = savedText[i].Text;
             console.log(textItem);
-            
+            $("#timetable").append("<th>");
+            $("#timetable").append("Hello world");
+            $("#timetable").append("</th>");
 
         };
     }
+
+displayText();
+
 });
