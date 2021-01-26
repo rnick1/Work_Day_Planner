@@ -118,5 +118,4 @@ $(document).ready(function() {
         event.preventDefault();
         localStorage.setItem('savedText5', JSON.stringify(savedText5));
     });
-
 });
