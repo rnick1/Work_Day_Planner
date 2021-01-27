@@ -119,3 +119,9 @@ $(document).ready(function() {
         localStorage.setItem('savedText5', JSON.stringify(savedText5));
     });
 });
+
+// If the current time is prior to the time listed in the time slot, then the time slot and 
+// all time slots that come after it must be colored green.
+// If the current time is equal to a time listed in a time slot, then that time slot should be
+// colored red.
+// If there are past time slots, then they must be colored grey.
