@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
-    var currentHour = moment().format('hh');
+    var currentHour = moment().format('kk');
 
     $('textarea').each(function(i) {
         var hour = i + 9;
@@ -12,6 +12,8 @@ $(document).ready(function() {
         }
         else if (hour === currentHour) {
             $(this).addClass('present');
+            $(this).attr("color", "blue");
+
         }
         else {
             $(this).addClass('future');
@@ -72,7 +74,7 @@ $(document).ready(function() {
         localStorage.setItem('savedText12', JSON.stringify(savedText12));
     });
 
-    var textArea1 = document.querySelector('#oneText');
+    var textArea1 = document.querySelector('#thirteenText');
     var savedText1 = [];
     var localStorageContent = localStorage.getItem('savedText1');
     textArea1.textContent = JSON.parse(localStorageContent);
@@ -85,7 +87,7 @@ $(document).ready(function() {
         localStorage.setItem('savedText1', JSON.stringify(savedText1));
     });    
     
-    var textArea2 = document.querySelector('#twoText');
+    var textArea2 = document.querySelector('#fourteenText');
     var savedText2 = [];
     var localStorageContent = localStorage.getItem('savedText2');
     textArea2.textContent = JSON.parse(localStorageContent);
@@ -98,7 +100,7 @@ $(document).ready(function() {
         localStorage.setItem('savedText2', JSON.stringify(savedText2));
     });    
     
-    var textArea3 = document.querySelector('#threeText');
+    var textArea3 = document.querySelector('#fifteenText');
     var savedText3 = [];
     var localStorageContent = localStorage.getItem('savedText3');
     textArea3.textContent = JSON.parse(localStorageContent);
@@ -111,7 +113,7 @@ $(document).ready(function() {
         localStorage.setItem('savedText3', JSON.stringify(savedText3));
     });    
     
-    var textArea4 = document.querySelector('#fourText');
+    var textArea4 = document.querySelector('#sixteenText');
     var savedText4 = [];
     var localStorageContent = localStorage.getItem('savedText4');
     textArea4.textContent = JSON.parse(localStorageContent);
@@ -124,7 +126,7 @@ $(document).ready(function() {
         localStorage.setItem('savedText4', JSON.stringify(savedText4));
     });    
     
-    var textArea5 = document.querySelector('#fiveText');
+    var textArea5 = document.querySelector('#seventeenText');
     var savedText5 = [];
     var localStorageContent = localStorage.getItem('savedText5');
     textArea5.textContent = JSON.parse(localStorageContent);
