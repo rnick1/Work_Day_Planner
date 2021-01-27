@@ -1,23 +1,5 @@
 $(document).ready(function() {
 var currentHour = moment().format('h');
-
-$('.row textarea').each(function(i) {
-    var hour = i + 9;
-
-    if (hour < currentHour) {
-        $(this).addClass('past');
-    }
-    else if (hour === currentHour) {
-        $(this).addClass('present');
-    }
-    else {
-        $(this).addClass('future');
-    }
-});
-    
-    
-    
-    
     
     // Date and time that updates thanks to moment.js:
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
@@ -76,4 +58,18 @@ $(document).ready(function() {
         localStorage.setItem('savedText', JSON.stringify(savedText));
     });
 
+});
+
+$('.row textarea').each(function(i) {
+    var hour = i + 9;
+
+    if (hour < currentHour) {
+        $(this).addClass('past');
+    }
+    else if (hour === currentHour) {
+        $(this).addClass('present');
+    }
+    else {
+        $(this).addClass('future');
+    }
 });
