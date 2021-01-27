@@ -1,7 +1,25 @@
 $(document).ready(function() {
 
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
+    var currentHour = moment().format('hh');
 
+    $('textarea').each(function(i) {
+        var hour = i + 9;
+    
+        if (hour < currentHour) {
+            $(this).addClass('past');
+            $(this).attr("disabled", "");
+        }
+        else if (hour === currentHour) {
+            $(this).addClass('present');
+        }
+        else {
+            $(this).addClass('future');
+        }
+    });
+
+    console.log(currentHour);
+    // try var textArea9 = $("#nineText")
     var textArea9 = document.querySelector('#nineText');
     var savedText9 = [];
     var localStorageContent = localStorage.getItem('savedText9');
