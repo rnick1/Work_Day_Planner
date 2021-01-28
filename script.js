@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
     var currentHour = moment().format('kk');
+    console.log(currentHour);
 
     $('textarea').each(function(i) {
         var hour = i + 9;
@@ -10,7 +11,7 @@ $(document).ready(function() {
             $(this).addClass('past');
             $(this).attr('disabled', '');
         }
-        else if (hour === currentHour) {
+        else if (hour == currentHour) {
             $(this).addClass('present');
         }
         else {
