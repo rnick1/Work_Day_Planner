@@ -32,6 +32,6 @@ THEN the saved events persist
 
 ## Here is the Workday Scheduler:
 
-![image](https://github.com/rnick1/Work_Day_Planner/blob/main/Workday_Planner.png)
+![image](https://github.com/rnick1/Work_Day_Planner/blob/main/Assets/Workday_Planner.png)
 
 ### Note: This application is live! The URL is: 
