@@ -30,7 +30,7 @@ THEN the saved events persist
 
 -Each time the user opens or refreshes the webpage the time at the top of the page updates to reflect the current date and time. This in turn allowed me to update the time slots so that the text areas in the elapsed time blocks are greyed out and disabled.
 
-## Here is the Workday Planner:
+## Here is the Workday Scheduler:
 
 ![image](https://github.com/rnick1/Work_Day_Planner/blob/main/Workday_Planner.png)
 
