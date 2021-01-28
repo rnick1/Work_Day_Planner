@@ -34,4 +34,4 @@ THEN the saved events persist
 
 ![image](https://github.com/rnick1/Work_Day_Planner/blob/main/Assets/Workday_Planner.png)
 
-### Note: This application is live! The URL is: 
+### Note: This application is live! The URL is: https://rnick1.github.io/Work_Day_Planner/
