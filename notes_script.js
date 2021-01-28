@@ -1,3 +1,32 @@
+for(var i = 0; i < something.length;i++) {
+
+}
+
+$("saveBtn").on('click', function(event) {
+    event.preventDefault();
+    for (var i = 0; i < something.length;i++) {
+        localStorage.setItem('hour' + i, JSON.stringify())
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function() {
 var currentHour = moment().format('h');
     
