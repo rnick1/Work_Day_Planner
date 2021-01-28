@@ -2,7 +2,6 @@ $(document).ready(function() {
 
     $('#currentDay').text(moment().format('MMMM Do YYYY, h:mm a'));
     var currentHour = moment().format('kk');
-    console.log(currentHour);
 
     $('textarea').each(function(i) {
         var hour = i + 9;
